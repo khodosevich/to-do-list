@@ -44,6 +44,18 @@ const CreateTask = ({tasks, setTasks}) => {
             <Typography mb={2} variant="h5">Create Task:</Typography>
             <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2, minWidth: 300 , mb: 2}}>
                 <TextField 
+                 sx={{
+                    color:"white",
+                    border:"1px solid white",
+                    background:"white",
+                    borderRadius:"5px",
+                    '&:hover': {
+                        border:"none"  
+                      },
+                      '&.Mui-focused': {
+                        background: 'white',  
+                      },
+                }}
                 onChange={(e) => setTask({...task, name: e.target.value})}
                 value={task.name} 
                 id="outlined-basic" 
@@ -51,6 +63,11 @@ const CreateTask = ({tasks, setTasks}) => {
                 variant="outlined" />
                 
                 <TextField 
+                sx={{
+                    color:"white",
+                    border:"1px solid white",
+                    background:"white"
+                }}
                 onChange={(e) => setTask({...task, description: e.target.value})}
                 value={task.description} 
                 id="outlined-basic" 

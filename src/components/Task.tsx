@@ -2,7 +2,7 @@ import { Box, Modal, TextField, Typography , Button , Checkbox} from '@mui/mater
 import { useState } from 'react';
 import DeleteIcon from '@mui/icons-material/Delete';
 
-const Task = ({ task, setTasks }) => {
+const Task = ({ task, setTasks , colorType }) => {
     
     const [openModal,setOpenModal] = useState(false)
     
@@ -45,9 +45,16 @@ const Task = ({ task, setTasks }) => {
                </Box>
             </Modal>
 
-            <Box display='flex' alignItems="center" minWidth={300} maxWidth={1000} justifyContent="space-between">
+            <Box sx={{display:'flex', alignItems:"center", background:colorType ? "#1E90FF" : "white" ,minWidth:"300px", maxWidth:1000, justifyContent:"space-between", border:"0.5px solid black"}}>
 
-                <Checkbox  onClick={updateCheckbox} checked={task.status} sx={{cursor: 'pointer'}} />
+                <Checkbox 
+           
+                onClick={updateCheckbox} checked={task.status} 
+                sx={{
+                    cursor: 'pointer', 
+                    '&.Mui-checked': {
+                      color: colorType ? "white" : "green",
+                    }}} />
 
                 {
                     task.status 
@@ -61,8 +68,8 @@ const Task = ({ task, setTasks }) => {
 
                
 
-                <Box display='flex' gap={1}>
-                    <DeleteIcon sx={{cursor: 'pointer' , color: '#DE2626'}} onClick={deleteTask} />
+                <Box display='flex' mr={1}>
+                    <DeleteIcon sx={{cursor: 'pointer' , color: colorType ? "#0153ff" : "#DE2626"}} onClick={deleteTask} />
                 </Box>
             
             </Box>
