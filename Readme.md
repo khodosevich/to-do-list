@@ -4,11 +4,12 @@
 
 ## Technology 
 
-
-<img src="https://skillicons.dev/icons?i=react" />
-<img src="https://skillicons.dev/icons?i=ts" />
-<img src="https://skillicons.dev/icons?i=vite" />
-<img src="https://skillicons.dev/icons?i=materialui" />
+<p> 
+    <img src="https://skillicons.dev/icons?i=react" />
+    <img src="https://skillicons.dev/icons?i=ts" />
+    <img src="https://skillicons.dev/icons?i=vite" />
+    <img src="https://skillicons.dev/icons?i=materialui" />
+</p>
 
 ## Installation 
 
