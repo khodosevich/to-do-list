@@ -42,19 +42,14 @@ const CreateTask = ({tasks, setTasks}) => {
                 }
 
             <Typography mb={2} variant="h5">Create Task:</Typography>
-            <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2, minWidth: 300 , mb: 2}}>
+            <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2, minWidth: 300 , mb: 2, p:"10px" , borderRadius:"5px", bgcolor:"white" }}>
                 <TextField 
+
                  sx={{
                     color:"white",
                     border:"1px solid white",
                     background:"white",
-                    borderRadius:"5px",
-                    '&:hover': {
-                        border:"none"  
-                      },
-                      '&.Mui-focused': {
-                        background: 'white',  
-                      },
+                    borderRadius:"5px", 
                 }}
                 onChange={(e) => setTask({...task, name: e.target.value})}
                 value={task.name} 
@@ -62,6 +57,7 @@ const CreateTask = ({tasks, setTasks}) => {
                 type="text" label="Name" 
                 variant="outlined" />
                 
+
                 <TextField 
                 sx={{
                     color:"white",
@@ -74,7 +70,15 @@ const CreateTask = ({tasks, setTasks}) => {
                 type="text" label="Description" 
                 variant="outlined" />
                 
-                <Button variant="contained" onClick={updateTask}>Create</Button>
+                <Button variant="contained" 
+                sx={{
+                    bgcolor:"black",
+                    transition:"all 0.5s ease",
+                    "&:hover": {
+                        bgcolor:"#404040"
+                    }
+                }}
+                onClick={updateTask}>Create</Button>
 
             </Box>
         </Box>

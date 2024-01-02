@@ -1,6 +1,6 @@
 # Simple to-do-list
 
-![mockup](./assets/mockup.png)
+![mockup](./assets/mockup2.png)
 
 ## Technology 
 
